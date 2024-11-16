@@ -1,0 +1,43 @@
+.main-page img {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.main-page h1 {
+  font-size: 3rem;
+  color: white;
+}
+.main-page p {
+  margin-top: 1rem;
+  font-weight: 300;
+  color: rgb(233, 232, 232);
+  font-size: 1.3rem;
+}
+.main-page .navbar-brand {
+  color: white;
+}
+.main-page .navbar {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.main-page .login_btn {
+  margin-right: 1rem;
+}
+.main-page .content {
+  position: absolute;
+  text-align: center;
+  top: 48%;
+  left: 33%;
+}
+
+@media (max-width: 767px) {
+  .main-page .content {
+    top: 30%;
+    left: 8%;
+  }
+  .main-page .content h1 {
+    font-size: 2.5rem;
+  }
+}/*# sourceMappingURL=Home.css.map */

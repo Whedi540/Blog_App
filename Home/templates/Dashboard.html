@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/Dashboard.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="main-page">
+        <img src="{% static 'images/Dashboard-bg.jpg' %}" alt="">
+        <nav class="navbar navbar-light  bg-grey fixed-top py-1">
+            <div class="container-fluid">
+              <a class="navbar-brand fs-4 ms-3" href="#">Blogs</a>
+              <form class="d-flex me-3" role="search" method="POST" action="{% url 'logout' %}">
+                  {% csrf_token %}
+                <button type="submit" class="btn btn-primary px-1 py-1">Logout</button>
+              </form>
+            </div>
+          </nav>
+          <div class="container">
+            <div class="content">
+              <div class="col">
+                <a href="{% url 'create_post' %}" class="btn btn-primary">Create Blog</a>
+              </div>
+            </div>
+         
+
+          <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+               {% for post in posts %}
+            <div class="col">
+              <div class="card">
+                <img  src="{{ post.image.url }}"class="card-img-top" alt="Image for {{ post.title }}">
+                <div class="card-body">
+                  <h5 class="card-title">{{ post.title }}</h5>
+                  <p class="card-text">{{ post.content|truncatewords:20 }}</p>
+                    <p class="card-text"><small class="text-muted">Posted by {{ post.author }} on {{ post.created_at }}</small></p>
+                    <a href="{% url 'blog_detail' post.id %}" class="btn btn-secondary">Read More</a>
+                   <a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit</a>
+                   <a href="{% url 'delete_post' post.id %}" class="btn btn-danger">Delete</a>
+                </div>
+              </div>
+            </div>
+               {% empty %}
+                <p>No blog posts available yet.</p>
+                {% endfor %}
+          </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" ></script>
+</body>
+</html>

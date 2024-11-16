@@ -1,0 +1,37 @@
+.main-page{ 
+    img{
+        width: 100vw;
+        height: 60vh;
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-position: center;
+        position: relative;
+    }
+    .navbar-brand {
+        color:white;
+    }
+    .navbar{
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .login_btn{
+        margin-right: 1rem;
+    }
+    .content{
+        position: absolute;
+        text-align: center;
+        top: 40%;
+        left: 44%;
+    }
+    .card img{
+        width: 100%;
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-position: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-page .content{
+        top: 30%;
+        left: 36%;
+    }}

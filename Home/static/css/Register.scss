@@ -1,0 +1,142 @@
+.register-page{
+    img{
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-position: center;
+        position: relative;
+    }
+    .navbar-brand {
+        color:white;
+    }
+    .navbar{
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .form-container {
+        background-color: white;
+        padding: 18px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        height: 460px;
+        position: absolute;
+        top: 14%;
+        left: 38%;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 25px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 1px;
+        font-weight:400;
+    }
+    
+    input[type="email"],
+    input[type="password"],
+    input[type="text"] {
+        width: 94%;
+        padding: 6px;
+        margin-bottom: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    button {
+        width: 94%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    p {
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    } 
+     
+}
+/* Styles for the alert box */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+}
+
+/* Success message */
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}
+
+/* Error message */
+.alert-danger {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+
+/* Info message */
+.alert-info {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #31708f;
+}
+
+/* Warning message */
+.alert-warning {
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    color: #8a6d3b;
+}
+
+/* Style for individual messages inside the alert */
+.alert ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.alert li {
+    margin-bottom: 5px;
+}
+
+/* Responsive design: Adjust padding and margin on smaller screens */
+@media (max-width: 768px) {
+    .alert {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    .register-page .form-container{
+        top: 12%;
+        left: 12%;
+        width: 300px;
+    }
+    .register-page .form-container{
+        top: 25%;
+    }
+}
+
